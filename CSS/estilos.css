@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Handjet:wght@100..900&family=Nerko+One&display=swap');
+body{
+    /*background-color: rgb(179, 225, 100)*/
+    background-image: url('../Imagenes/Trazo.jpg');
+        background-size: contain;
+    background-position: center;
+
+    color: blue;
+    font-family: "Handjet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ELGR" 1,
+    "ELSH" 2;
+    
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 400;
+}
+
+img{
+    width: 200;
+    height: auto;
+}
+
+div{
+    width: 500px;
+    height: 50px;
+    background-color: red;
+    border: 5px dotted white;
+}
