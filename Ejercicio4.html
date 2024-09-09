@@ -4,27 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
-    <link rel="stylesheet" href="CSS/estilos.css">
-    <!--Estilo embebido
-    <style>
-        body{
-            background-color: aqua;
-        }   
-        -->
-    </style>
+    <title>Ejercicio de selectores</title>
 
+    <!--Tipos de selectores-->
+    <style>
+        /*por elemento*/
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: #d3d3d3;
+            display: inline-block;
+            /*border: 1px solid black;*/
+            border-width: 1px;
+            border-style:dotted;
+            border-color:#8a2be2;
+
+        }
+        /*por id*/
+        #caja{
+            background-color: #adff2f;
+        }
+        /*por clase*/
+        .circulo{
+            background-color: #87cefa;
+            border-style: solid;
+            border-radius: 50%;
+        }
+
+        .red{
+            background-color: #ff0000;
+        }
+
+        .amarillo{
+            background-color: #ffff00 !important;
+        }
+
+        /*Pseudoclases*/
+        div:hover{
+            background-color: black !important;
+        }
+
+    </style>
 </head>
-<!--Estilo en linea-->
 <body>
-    <h1>Ejemplo de estilos</h1>
-    <p>Este es un texto de Ejemplo</p>
-    <a href="#">Ir al sitio</a>
-    <br>
-    <img src="Imagenes/lobo.jpg" width="500">
-    <div>
-        <b>Buenos dias</b>
-    </div>
+
+    <div class="red" class="amarillo"></div>
+    <div id="caja"></div>
+    <div class="circulo" class="amarillo"></div>
+    <div class="circulo"></div>
+    <div class="red"></div>
+    <div class="circulo"></div>
+    <div class="amarillo"></div>
     
+    primero tercero  y ultimo
 </body>
 </html>
