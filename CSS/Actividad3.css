@@ -71,6 +71,24 @@ a{
     
 }
 
-.lti h1{
+.lti{
     margin-top: 100px;
+}
+
+.fic{
+    background-image: url(../Imagenes/fic.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+.acomodo{
+    display: inline-block;
+}
+
+.color{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
 }
