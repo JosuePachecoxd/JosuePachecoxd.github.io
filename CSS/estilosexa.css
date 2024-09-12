@@ -29,6 +29,7 @@ section{
     background-position: center;
     width: 200px;
     height: 200px;
+    text-align: center;
 }
 
 .p2{
@@ -38,6 +39,7 @@ section{
     background-color: blueviolet;
     width: 200px;
     height: 200px;
+    text-align: center;
 }
 
 .p3{
@@ -47,6 +49,7 @@ section{
     background-color: yellow;
     width: 200px;
     height: 200px;
+    text-align: center;
 }
 
 .p4{
@@ -56,6 +59,7 @@ section{
     background-color: aqua;
     width: 200px;
     height: 200px;
+    text-align: center;
 }
 
 .admin{
