@@ -6,6 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="css/Actividad3.css" rel="stylesheet"/>
+
+    <style>
+        div{
+            display: inline-block;
+            margin-left: 20px ;
+            
+        }
+        h1{
+            padding: 40px;
+        }
+        
+        #color{   
+            background-color: rgba(0, 0, 0, 0.157);
+            background-size: cover;
+            text-align: center;
+            color: black;
+        }
+
+        .lti{
+    background-image: url(../Imagenes/lti.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    text-align: center;    
+}
+
+.fic{
+    background-image: url(../Imagenes/fic.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+.derecho{
+    background-image: url(../Imagenes/derecho.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+        
+
+    </style>
 </head>
 <body>
     <header>
@@ -26,21 +73,24 @@
     </section>
 
     <br>
-    <div class="acomo">
-        <section class="lti" >
-            <div class="color">
-                <h1 style="padding-top: 100px;">Licenciado en Tecnologias de la Informacion</h1>
+    
+        <section style="display: inline-block;padding-left: 20%;">
+            <div id="color" class="lti" >
+                <h1>Licenciado en Tecnologias de la Informacion</h1>
                 <div class="link"> <a href="https://fcav.uat.edu.mx/Oferta_Educativa/LTI/Mision_LTI.aspx"> Conoce mas acerca de la carrera</a></div>
-            </div>                       
-        </section>
-
-        <section class="fic">
-            <div class="color">
-                <h1 style="padding-top: 100px;">Facultad de Ingenieria y Ciencias</h1>
+            </div>                    
+                
+            <div class="fic" id="color">
+                <h1 >Facultad de Ingenieria y Ciencias</h1>
                 <div class="link"><a href="https://fic.uat.edu.mx/">Conoce las ofertas academicas</a></div>
+            </div>
+
+            <div class="derecho" id="color">
+                <h1 style="padding: 60px;">Facultad de Derecho</h1>
+                <div class="link"><a href="https://fdcsv.uat.edu.mx/">Conoce las ofertas academicas</a></div>
             </div>
         </section>
 
-    </div>
+    </section>
 </body>
 </html>

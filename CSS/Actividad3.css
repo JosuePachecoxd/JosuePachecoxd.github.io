@@ -55,6 +55,14 @@ a{
     text-align: center;    
 }
 
+#color{
+   
+    background-color: rgba(0, 0, 0, 0.157);
+    background-size: cover;
+    text-align: center;
+    color: black;
+}
+
 .link{
     background-color: #ff6912;
     border: black;
@@ -67,12 +75,7 @@ a{
     background-position: center;
     width: 300px;
     height: 300px;
-    text-align: center;
-    
-}
-
-.lti{
-    margin-top: 100px;
+    text-align: center;    
 }
 
 .fic{
@@ -84,11 +87,15 @@ a{
     text-align: center;
 }
 
-.acomodo{
-    display: inline-block;
+.derecho{
+    background-image: url(../Imagenes/derecho.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    text-align: center;
 }
 
-.color{
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+
+
+
