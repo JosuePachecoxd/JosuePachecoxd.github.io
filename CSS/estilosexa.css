@@ -24,7 +24,7 @@ section{
 }
 
 .p1{
-    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/Solo\ leveling.jpg);
+    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/Solo\ leveling.jpg) !important;
     background-size: cover;
     background-position: center;
     width: 200px;
@@ -33,30 +33,30 @@ section{
 }
 
 .p2{
-    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/D&W.jpeg);
+    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/D&W.jpeg) !important;
     background-size: cover;
     background-position: center;
-    background-color: blueviolet;
+    
     width: 200px;
     height: 200px;
     text-align: center;
 }
 
 .p3{
-    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/Kang\ Taeshik.jfif);
+    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/Kang\ Taeshik.jfif) !important;
     background-size:cover;
     background-position: center;
-    background-color: yellow;
+    
     width: 200px;
     height: 200px;
     text-align: center;
 }
 
 .p4{
-    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/sungiguo.jpg);
+    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/sungiguo.jpg) !important;
     background-size: cover;
     background-position: center;
-    background-color: aqua;
+    
     width: 200px;
     height: 200px;
     text-align: center;
