@@ -24,7 +24,7 @@ section{
 }
 
 .p1{
-    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/Solo\ leveling.jpg) !important;
+    background-image: url('../JosuePachecoxd.github.io-main/Imagenes/Solo\ leveling.jpg') !important;
     background-size: cover;
     background-position: center;
     width: 200px;
@@ -32,7 +32,7 @@ section{
 }
 
 .p2{
-    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/D&W.jpeg) !important;
+    background-image: url('../JosuePachecoxd.github.io-main/Imagenes/D&W.jpeg') !important;
     background-size: cover;
     background-position: center;
     background-color: blueviolet;

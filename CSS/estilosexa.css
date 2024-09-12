@@ -24,7 +24,7 @@ section{
 }
 
 .p1{
-    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/Solo\ leveling.jpg) !important;
+    background-image: url('../JosuePachecoxd.github.io-main/Imagenes/Solo\ leveling.jpg') !important;
     background-size: cover;
     background-position: center;
     width: 200px;
@@ -43,7 +43,7 @@ section{
 }
 
 .p3{
-    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/Kang\ Taeshik.jfif) !important;
+    background-image: url('../JosuePachecoxd.github.io-main/Imagenes/Kang\ Taeshik.jfif') !important;
     background-size:cover;
     background-position: center;
     
@@ -53,7 +53,7 @@ section{
 }
 
 .p4{
-    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/sungiguo.jpg) !important;
+    background-image: url('../JosuePachecoxd.github.io-main/Imagenes/sungiguo.jpg') !important;
     background-size: cover;
     background-position: center;
     
