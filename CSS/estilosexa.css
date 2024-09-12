@@ -1,0 +1,69 @@
+body{
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+h1{
+    color: white;
+text-align: center;
+padding-top: 150px;
+}
+
+h3{
+    color: white;
+    margin-top: 10px;
+}
+
+section{
+    display: inline-block;
+   text-align: center;
+   position: center;
+   margin-right: 40px;
+}
+
+.p1{
+    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/Solo\ leveling.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+}
+
+.p2{
+    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/D&W.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+}
+
+.p3{
+    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/Kang\ Taeshik.jfif);
+    background-size:cover;
+    background-position: center;
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
+
+.p4{
+    background-image: url(../JosuePachecoxd.github.io-main/Imagenes/sungiguo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+}
+
+.admin{
+    color: white;
+    width: 200px;
+    height: 30px;
+text-align: center;
+border-style: solid;
+padding-top: 10px;
+    
+}
