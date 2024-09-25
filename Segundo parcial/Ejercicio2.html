@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de input</title>
+
+    <style>
+        body, form{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            font-size: 2rem;
+            gap:10px
+        }
+
+        input, select{
+            color: black;
+            width: 900px;
+            height: 40px;
+            padding: 5px;
+            font-size: 1.5rem;
+            border-width: 3px;
+        }
+
+        input:focus{
+            color: white;
+            background-color: gray;
+        }
+
+        #enviar{
+            padding: 20px;
+            font-size: 1.2rem;
+            width: 10vw;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="">Entrada de tipo texto</label>
+        <input type="">
+        <label for="">Entrada de tipo numerico</label>
+        <input type="number"> 
+        <label for="">Entrada de tipo email</label>
+        <input type="email">
+        <label for="">Entrada de tipo fecha</label>
+        <input type="date">
+        <label for="">Entrada de tipo hora</label>
+        <input type="time">
+        <label for="">Entrada de tipo archivo</label>
+        <input type="file" accept="*.pdf">
+        <label for="">Entrada de tipo password</label>
+        <input type="password">
+        <select required>
+            <option value="">Selecciona una opcion valida</option>
+            <option value="Mexico">Mexico</option>
+            <option value="EUA">EUA</option>
+            <option value="Canada">Canada</option>
+        </select>
+        <input id="enviar" type="submit">        
+    </form>         
+</body>
+</html>

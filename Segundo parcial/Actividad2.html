@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURP</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            font-size: 1.4rem;
+            gap: 20%;
+                        
+        }
+
+        form{
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            gap: 20%;
+        }
+
+        div{
+            margin-top: 20px;
+            
+        }
+
+        .fila{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input, select{
+            width: 70%;
+        }
+
+        input[type="submit"]{
+            width: 20%;
+            text-align: center;
+            align-items: center;
+        }
+
+
+
+    
+    </style>
+
+</head>
+<body>
+    <form>
+        <div class="fila">
+            <label>Nombre</label>
+            <input type="text">
+        </div>
+        
+        <div class="fila">
+            <label>Apellido Paterno</label>
+            <input type="text">
+        </div>
+        <div class="fila">
+            <label>Apellido Materno</label>
+            <input type="text">
+        </div>
+        <div>
+            <label>Estado</label>
+            <select style="width: 200px;" id="claveEntidad" required>
+                <option value="" disabled="" selected="">Selecciona el estado</option>
+                  <option value="AS">Aguascalientes</option>
+                  <option value="BC">Baja California</option>
+                  <option value="BS">Baja California Sur</option>
+                  <option value="CC">Campeche</option>
+                  <option value="CL">Coahuila</option>
+                  <option value="CM">Colima</option>
+                  <option value="CS">Chiapas</option>
+                  <option value="CH">Chihuahua</option>
+                  <option value="DF">Ciudad de México</option>
+                  <option value="DG">Durango</option>
+                  <option value="GT">Guanajuato</option>
+                  <option value="GR">Guerrero</option>
+                  <option value="HG">Hidalgo</option>
+                  <option value="JC">Jalisco</option>
+                  <option value="MC">Estado de México</option>
+                  <option value="MN">Michoacán</option>
+                  <option value="MS">Morelos</option>
+                  <option value="NT">Nayarit</option>
+                  <option value="NL">Nuevo León</option>
+                  <option value="OC">Oaxaca</option>
+                  <option value="PL">Puebla</option>
+                  <option value="QT">Querétaro</option>
+                  <option value="QR">Quintana Roo</option>
+                  <option value="SP">San Luis Potosí</option>
+                  <option value="SL">Sinaloa</option>
+                  <option value="SR">Sonora</option>
+                  <option value="TC">Tabasco</option>
+                  <option value="TS">Tamaulipas</option>
+                  <option value="TL">Tlaxcala</option>
+                  <option value="VZ">Veracruz</option>
+                  <option value="YN">Yucatán</option>
+                  <option value="NE">Nacido en el extranjero</option><option value="ZS">Zacatecas</option>
+                  
+              </select>
+        </div>
+        <div>
+            <label>Fecha de Nacimiento</label>
+            <input style="width: 200px;" type="date">
+        </div>
+        <div>
+            <label>Sexo</label>
+            <select style="width: 160px;">
+                <option value="" disabled selected>Seleccione su genero</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+
+                
+            </select>
+        </div>
+
+        <div>
+            <input class="fila" id="enviar" type="submit">
+        </div>
+    </form>
+</body>
+</html>
+
+
