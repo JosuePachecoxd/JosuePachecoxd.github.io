@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .entrada{
+            margin-top: 50px;
+            margin-left: 400px;
+        }
+        
+        .eninfo{
+            background-color: red;
+            margin-top: 20px;
+            height: 20px;
+            width: auto;
+            
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: black;
+            background-color: aquamarine;
+            height: 20px;
+            width: 400px;            
+        }
+
+        b{
+            padding-left: 40px;
+        }
+
+        button{
+            margin-left: 40px;
+        }
+
+        #contenedor{
+            display:flex;
+            flex-direction: center;
+            align-items: center;
+            background-color: aqua;
+            width: 300px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="entrada">
+        <b>Nombre</b>
+    <input type="text">
+    <b>Edad</b>
+    <input id="edad" type="number">
+    <button id="btn">Agregar</button>
+    </div>
+
+    <div id="contenedor"></div>
+
+    
+    <script>
+        const boton = document.getElementById("edad")
+        const contenedor = document.getElementById("contenedor")
+
+        boton.addEventListener('click', function(){
+            if(edad => 18){
+            contenedor.insertadjacentJTML('beforeend', template)
+        template = `<div> Es mayor de edad ${contenedor}</div>`;
+        }
+        boton.addEventListener('click', function(){
+        
+        })
+        })
+        
+        function consulta()
+    {
+        
+    }
+
+
+
+        
+
+    </script>
+</body>
+</html>
