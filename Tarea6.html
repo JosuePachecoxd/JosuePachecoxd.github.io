@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .prim {
+            display: flex;
+            margin-top: 50px;
+        }
+        .gen {
+            width: 200px;
+            margin-bottom: 10px;
+            padding: 3px;
+            border: 2px black solid;
+            background-color: orangered;
+            cursor: pointer;
+        }
+        .img {
+            background-color: black;
+            margin-left: 25%;
+            margin-bottom: 50px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .main {
+            margin-left: 300px;
+        }
+        .tip {
+            width: 300px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="prim">
+        <div class="tip">
+            <div class="gen" data-gen="1"><b>Primera Generación</b></div>
+            <div class="gen" data-gen="2"><b>Segunda Generación</b></div>
+            <div class="gen" data-gen="3"><b>Tercera Generación</b></div>
+            <div class="gen" data-gen="4"><b>Cuarta Generación</b></div>
+            <div class="gen" data-gen="5"><b>Quinta Generación</b></div>
+            <div class="gen" data-gen="6"><b>Sexta Generación</b></div>
+            <div class="gen" data-gen="7"><b>Séptima Generación</b></div>
+            <div class="gen" data-gen="8"><b>Octava Generación</b></div>
+        </div>
+
+        <div class="main">
+            <div class="img">s</div>
+            <button>Nombre</button>
+            <button>Nombre</button>
+            <button>Nombre</button>
+            <button>Nombre</button>
+        </div>
+    </div>
+
+    <script>
+        const apiBase = "https://pokeapi.co/api/v2/pokemon/";
+        const generations = {
+            1: { start: 1, end: 151 },
+            2: { start: 152, end: 251 },
+            3: { start: 252, end: 386 },
+            4: { start: 387, end: 493 },
+            5: { start: 494, end: 649 },
+            6: { start: 650, end: 721 },
+            7: { start: 722, end: 809 },
+            8: { start: 810, end: 905 }
+        };
+
+        const buttons = document.querySelectorAll('button');
+        const imgDiv = document.querySelector('.img');
+        const genButtons = document.querySelectorAll('.gen');
+
+        let currentPokemon = null;
+        let aciertos = 0;
+        let errores = 0;
+        let pokemonList = [];
+        let guessedPokemon = new Set();
+
+        async function getRandomPokemon(gen) {
+            if (guessedPokemon.size === pokemonList.length) {
+                alert("¡Felicidades! Has acertado el nombre de todos los Pokémones.");
+                return;
+            }
+
+            const availablePokemon = pokemonList.filter(pokemon => !guessedPokemon.has(pokemon.id));
+            const randomPokemon = availablePokemon[Math.floor(Math.random() * availablePokemon.length)];
+            const response = await fetch(apiBase + randomPokemon.id);
+            const pokemon = await response.json();
+            return pokemon;
+        }
+
+        function loadPokemonList(gen) {
+            const { start, end } = generations[gen];
+            pokemonList = [];
+            for (let i = start; i <= end; i++) {
+                pokemonList.push({ id: i });
+            }
+        }
+
+        function updateUI(pokemon) {
+            imgDiv.innerHTML = `<img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">`;
+            currentPokemon = pokemon.name;
+
+            const randomButtons = Array.from(buttons);
+            const correctButtonIndex = Math.floor(Math.random() * randomButtons.length);
+
+            randomButtons.forEach((button, index) => {
+                if (index === correctButtonIndex) {
+                    button.textContent = pokemon.name;
+                    button.dataset.correct = "true";
+                } else {
+                    fetchRandomPokemonName().then(name => {
+                        button.textContent = name;
+                        button.dataset.correct = "false";
+                    });
+                }
+            });
+        }
+
+        async function fetchRandomPokemonName() {
+            const randomId = Math.floor(Math.random() * 905) + 1;
+            const response = await fetch(apiBase + randomId);
+            const pokemon = await response.json();
+            return pokemon.name;
+        }
+
+        function handleErrors() {
+            if (errores >= 3) {
+                alert("Has fallado 3 veces. El juego se reinicia.");
+                aciertos = 0;
+                errores = 0;
+                guessedPokemon.clear();
+            }
+        }
+
+        genButtons.forEach(button => {
+            button.addEventListener('click', async (event) => {
+                const gen = event.currentTarget.getAttribute('data-gen');
+                loadPokemonList(gen);
+                const randomPokemon = await getRandomPokemon(gen);
+                updateUI(randomPokemon);
+            });
+        });
+
+        buttons.forEach(button => {
+            button.addEventListener('click', async () => {
+                if (button.dataset.correct === "true") {
+                    aciertos++;
+                    alert(`¡Correcto! Llevas ${aciertos} aciertos.`);
+                    guessedPokemon.add(currentPokemon); 
+                    const gen = document.querySelector('.gen[data-gen]').getAttribute('data-gen') || 1;
+                    const nextPokemon = await getRandomPokemon(gen);
+                    if (nextPokemon) updateUI(nextPokemon); 
+                } else {
+                    errores++;
+                    alert("Incorrecto, intenta de nuevo.");
+                    handleErrors();
+                }
+            });
+        });
+
+        loadPokemonList(1);
+        getRandomPokemon(1).then(updateUI);
+
+    </script>
+
+</body>
+</html>
