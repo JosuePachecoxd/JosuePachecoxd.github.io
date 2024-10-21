@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Input</title>
+    <style>
+   @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+   body{
+    background-color: rgb(114, 192, 192);
+   }
+   .agdasima-regular {
+  font-family: "Agdasima", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.agdasima-bold, p, input {
+  font-family: "Agdasima", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+        div{
+            width: 100px;
+            border: 1px black solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Input</h1>
+    <p>La etiqueta "input" permite recopilar informacion del usuario a traves de diversos tipos de campos de entrada, es esencial en la creacion de formularios, campos de texto, contraseñas, botones de seleccion, casillas de verificacion, entre otras cosas. </p>
+
+    <p>Un tipo de input es el de "text", este permite la entrada de texto de una sola linea.</p>
+    <input type="text">
+    <p>Otro tipo es el de "password", este oculta el texto mientras que el usuario escribe.</p>
+    <input type="password">
+    <p>Tambien existe el de tipo "email", el campo esspecializado para correos electronicos, validando el formato adecuado.</p>
+    <input type="email">
+    <p>Otro es el de "number", este es para la entrada de numeros, incluye botones de incremento y decremento y tambien se pueden poner numeros negativos.</p>
+    <input type="number">
+    <p>Esta tambien el de tipo "date" el cual permite seleccionar una fecha de un calendario desplegable.</p>
+    <input type="date">
+    <p>"Checkbox" permite seleccionar multiples opciones.</p>
+    <div>
+        <input type="checkbox"> hola
+        <br>
+        <input type="checkbox"> no hola
+    </div>
+    <p>"File" este input permite al usuario subir archivos desde la computadora.</p>
+    <input type="file">
+    <p>Y por ultimo esta el de "submit" es un boton el cual sirve para enviar el formulario.</p>
+    <input type="submit">
+    
+
+
+</body>
+</html>

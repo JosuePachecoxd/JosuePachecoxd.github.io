@@ -2,46 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Flex</title>
     <style>
-        .cuadro{
-            background-color: white;
-            border-style: solid;
-            border-width: 2px;
-            width: 800px;
-            height:400px;
-            margin-left: 400px;
-            margin-top: 150px;
+        body{
+            color: beige;
+            background-color: rgb(42, 49, 69);
         }
-
-        .barra{
-            background-color: aqua;
-            width: auto;
-            height: 70px;
-            margin-bottom: 70px;
-        }
-
-        section{
+        .h1{
             display: flex;
-            flex-direction:;
-            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(151, 101, 36);
+            text-align: center;
+
         }
+        .box{
+            background-color: rgb(182, 3, 3);
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+            text-align: center;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            border: 2px black solid;
+            padding-left: 10px;
+        }
+        .row-reverse{
+            display: flex;
+            flex-direction: row-reverse;
+            border: 2px black solid;
+            padding-right:10px; 
+        }
+        .column{
+            display: flex;
+            flex-direction: column;
+            border: 2px black solid;
+            padding: 10px;
+        }
+        .column-reverse{
+            display: flex;
+            flex-direction: column-reverse;
+            border: 2px black solid;
+            padding: 10px;}
+        div{
+            margin-bottom: 10px;
+        }
+        .flex{
+            width: 300px;
+            padding-left: 30px;
 
-
+        }
+        .grid{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 300px;
+            padding-right: 30px;
+            text-align: center;
+        }
+        a{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    
-    <div class="cuadro">
-        <div class="barra"></div>
-        <section>
-            <label>Usuario</label>
-            <input type="text">
-        </section>
+    <div class="h1">
+        <div class="flex"><h1>Flex</h1></div>
+
+        <a href="../Segundo parcial/Tarea2.1.Html">click para ver el<div class="grid"><h1>Grid</h1></div></a>
+        
         
     </div>
+    
+    <p>Este se usa para distribuir y alinear elementos dentro de un contenedor, prioncipalmente en una sola direccion (horizontal o vertical), es ideal para alinear elementos a lo largo de un eje principal y controlar su espacio de manera eficiente.</p>
+    <div>
+        <h4>Propiedades principales:</h4>
+        <p>Flex-direction: Define la direccion en la que se alinean los elementos con row, row-reverse, column, column-reverse.</p>
+        <div class="row">
+            <p>Lo que hace el row es que es que alinea los elementos de forma horizontal de izquierda a derecha.</p>
+            <div class="box"></div>
+        </div>
+        <div class="row-reverse">
+            <p>El row-reverse alinea los elementos de forma horizontal pero de derecha a izquierda.</p>
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <p>El column alinea los elementos de forma vertical de arriba hacia abajo.</p>
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <div class="column-reverse">
+            <p>El column-reverse alinea los elementos de forma vertical de abajo hacia arriba.</p>
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </div>
+    
 </body>
 </html>

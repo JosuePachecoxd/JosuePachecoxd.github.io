@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Primera Generación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .pokemon-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .pokemon-card {
+            width: 150px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+        .pokemon-card:hover {
+            transform: translateY(-5px);
+        }
+        .pokemon-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-top: 10px;
+        }
+        .pokemon-name {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pokémon de la Primera Generación</h1>
+    <div class="pokemon-container" id="pokemonContainer"></div>
+
+    <script>
+        const apiBase = "https://pokeapi.co/api/v2/pokemon/";
+        const generation1 = { start: 1, end: 151 };  // IDs de los Pokémon de la primera generación
+
+        const pokemonContainer = document.getElementById('pokemonContainer');
+
+        // Función para obtener los datos de cada Pokémon de la primera generación
+        async function fetchGeneration1Pokemon() {
+            for (let i = generation1.start; i <= generation1.end; i++) {
+                const response = await fetch(`${apiBase}${i}`);
+                const pokemon = await response.json();
+                displayPokemon(pokemon);
+            }
+        }
+
+        // Función para crear una tarjeta y mostrar cada Pokémon en el contenedor
+        function displayPokemon(pokemon) {
+            const pokemonCard = document.createElement('div');
+            pokemonCard.classList.add('pokemon-card');
+
+            pokemonCard.innerHTML = `
+                <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+                <div class="pokemon-name">${pokemon.name}</div>
+            `;
+
+            pokemonContainer.appendChild(pokemonCard);
+        }
+
+        // Llamar a la función para obtener y mostrar los Pokémon de la primera generación
+        fetchGeneration1Pokemon();
+    </script>
+
+</body>
+</html>

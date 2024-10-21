@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .contenedor{
+          display: grid;
+          grid-template-columns: repeat(4, 1fr); 
+          gap: 40px;
+          margin: 20px;
+          text-align: center;
+          border: 1px solid black;
+        }
+      
+        .item {
+          background-color: lightblue;
+          padding: 20px;
+          text-align: center;
+          
+        }
+
+        img{
+            height: 300px;
+        }
+        
+      </style>
+
+</head>
+<body>
+
+    <div class="contenedor" id="contenedorPrincipal"></div>
+
+    <script>
+        const apiBase = "https://pokeapi.co/api/v2/pokemon/";
+
+async function consultarPokemon(id, contenedor, itemId) {
+    let consulta = await fetch(`${apiBase}${id}/`);
+    let datos = await consulta.json();
+    dibujarPokemon(datos, contenedor, itemId);
+}
+
+function dibujarPokemon(datosPokemon, contenedor,itemId) {
+    let rutaImagen = datosPokemon.sprites.other.home.front_default;
+    let tipoPokemon = datosPokemon.types[0].type.name;
+    let pokemon = `<h1>${datosPokemon.name}</h1> 
+        <img src="${rutaImagen}"/> 
+        <h1>${datosPokemon.types[0].type.name}</h1>`;
+    contenedor.innerHTML = pokemon;
+}
+
+function cargarVariosPokemon() {
+    const contenedorPrincipal = document.getElementById("contenedorPrincipal");
+    
+    for (let i = 1; i <= 151; i++) { 
+        let contenedor = document.createElement("div");
+        contenedor.id = `pokemon-${i}`;
+        contenedorPrincipal.appendChild(contenedor);
+
+        consultarPokemon(i, contenedor);   
+    }
+  
+}
+
+cargarVariosPokemon();
+
+    </script>
+    
+</body>
+</html>
